@@ -1,0 +1,201 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light grey background for contrast */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c0392b; /* Dark red color for the heading */
+    font-size: 2em;
+}
+
+.add-user-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Bright red background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.add-user-btn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+    padding: 15px;
+    text-align: left;
+    
+}
+
+.user-table th {
+    background-color: #c0392b; /* Dark red background for the header */
+    color: white;
+    text-transform: uppercase; /* Uppercase letters for headers */
+}
+
+.user-table tr:hover {
+    background-color: #f9c6c6; /* Light red on row hover */
+}
+
+.user-table tr {
+    border-bottom: 2px solid #e74c3c; /* Red border for separation */
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.edit-icon,
+.delete-icon {
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.edit-icon:hover {
+    color: #e74c3c; /* Red color on hover for edit icon */
+}
+
+.delete-icon:hover {
+    color: #FF5733; /* Slightly darker red for delete icon on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .add-user-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #c0392b;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #c0392b;
+    font-size: 1.8em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.1em;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #e74c3c;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #c0392b;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+}
